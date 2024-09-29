@@ -1,0 +1,17 @@
+import re
+
+def is_valid_date_format(date_string, date_format):
+    try:
+        datetime.datetime.strptime(date_string, date_format)
+        return True
+    except ValueError:
+        return False
+
+
+date_string = "2023-10-09"
+date_format = "%Y-%m-%d"
+
+if is_valid_date_format(date_string, date_format):
+    print(f"{date_string} is a valid date in the format {date_format}.")
+else:
+    print(f"{date_string} is not a valid date in the format {date_format}.")
